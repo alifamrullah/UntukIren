@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#fff5f7">
+    <title>For You ♡</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <button class="back-button" id="backButton" onclick="previousPage()">
+            ←
+        </button>
+
+        <!-- PAGE 1 -->
+        <section class="page active" id="page1">
+
+            <div class="floating floating-1">♡</div>
+            <div class="floating floating-2">✦</div>
+            <div class="floating floating-3">♡</div>
+
+            <div class="page-content">
+
+                <div class="character">
+                    <img src="assets/luffy-1.png" alt="Luffy">
+                </div>
+
+                <h1>Hola Mi Amorrr 👋🏻</h1>
+
+                <p class="description">
+                    Aku mau nanya sesuatu niii
+                </p>
+
+                <button class="main-button" onclick="nextPage()">
+                    Mulai 💌
+                </button>
+
+            </div>
+
+            <div class="page-indicator">
+                <span class="active-dot"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </section>
+
+
+        <!-- PAGE 2 -->
+        <section class="page" id="page2">
+
+            <div class="page-content">
+
+                <div class="character page2-character">
+                    <img src="assets/luffy-2.png" alt="Luffy">
+                </div>
+
+                <div class="message-card">
+                    <p>
+                        Berhubung kata kamu, kamu udah selesai sama diri kamuuu (udah berdamai/ga ada yang ngeganjel lagii sama masalalu kamuu)
+                    </p>
+                </div>
+
+                <button class="main-button" onclick="nextPage()">
+                    Lanjut →
+                </button>
+
+            </div>
+
+            <div class="page-indicator">
+                <span></span>
+                <span class="active-dot"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </section>
+
+
+        <!-- PAGE 3 -->
+        <section class="page" id="page3">
+
+            <div class="page-content">
+
+                <div class="photo-frame">
+                    <img src="assets/foto2.jpg" alt="Foto kita">
+                </div>
+
+                <p class="description">
+                    Aku tau sebenernya kamu pengen aku tembak secara langsungg
+                </p>
+
+                <button class="main-button" onclick="nextPage()">
+                    Tapiii →
+                </button>
+
+            </div>
+
+            <div class="page-indicator">
+                <span></span>
+                <span></span>
+                <span class="active-dot"></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </section>
+
+
+        <!-- PAGE 4 -->
+        <section class="page" id="page4">
+
+            <div class="page-content">
+
+                <div class="character page4-character">
+                    <img src="assets/luffy-3.png" alt="Luffy">
+                </div>
+
+                <h2>Tapiii Sebelum kita ketemu...</h2>
+
+                <p class="description">
+                    Aku mau kamu jadi milik akuuuu, tenang ajaa nanti aku tembak lagi koo secara langsung pas kita ketemu nantiii
+                </p>
+
+                <button class="main-button" onclick="nextPage()">
+                    Jadiiii →
+                </button>
+
+            </div>
+
+            <div class="page-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="active-dot"></span>
+                <span></span>
+            </div>
+
+        </section>
+
+
+        <!-- PAGE 5 -->
+        <section class="page question-page" id="page5">
+
+            <div class="question-decoration">♡</div>
+
+            <div class="page-content">
+
+                <div class="character question-character">
+                    <img src="assets/luffy-4.png" alt="Luffy">
+                </div>
+
+                <h2>Iren...</h2>
+
+                <h1 class="question">
+                    Kamu mau nggak jadi<br>
+                    pacar akuuu?
+                </h1>
+
+                <div class="answer-buttons">
+
+                    <button
+                        class="yes-button"
+                        onclick="answerYes()">
+                        MAUUU PAKE BANGETTT 💗
+                    </button>
+
+                    <button
+                        class="no-button"
+                        id="noButton"
+                        onclick="moveNoButton()">
+                        Yang ini mau juga tapi entarrr
+                    </button>
+
+                </div>
+
+                <p class="tease" id="teaseText"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- YES ENDING -->
+        <section class="page ending-page" id="yesPage">
+
+            <div class="confetti-container" id="confetti"></div>
+
+            <div class="page-content">
+
+                <div class="character happy-character">
+                    <img src="assets/luffy-5.png" alt="Luffy">
+                </div>
+
+                <h1>YAYYYYY 😭❤️</h1>
+
+                <p class="description">
+                    haloooo pacar kesayangann akuuuu, cintanyaa akuuuu, cantikknyaa akuuuu.
+                </p>
+
+                <div class="heart-row">
+                    ❤️ ❤️ ❤️
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NO ENDING -->
+        <section class="page ending-page" id="noPage">
+
+            <div class="page-content">
+
+                <div class="character sad-character">
+                    🧸💔
+                </div>
+
+                <h1>Yahhh... 😭</h1>
+
+                <p class="description">
+                    Teks ending nanti kita isi bareng.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
